@@ -1,0 +1,24 @@
+{
+  "name": "projeto-tweteroo",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucas-Rodrigues-code/projeto-tweteroo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucas-Rodrigues-code/projeto-tweteroo/issues"
+  },
+  "homepage": "https://github.com/Lucas-Rodrigues-code/projeto-tweteroo#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
