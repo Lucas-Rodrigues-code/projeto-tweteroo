@@ -8,10 +8,12 @@ app.use(json());
 const users = []
 const tweets = []
 
-let user = {}
+
+
+
 
 app.post('/sign-up', (req, res) => {
-    user = {
+   const user = {
         username: req.body.username,
         avatar: req.body.avatar
     }
@@ -26,7 +28,7 @@ app.post('/tweets', (req, res) => {
         tweet: req.body.tweet
     }
 
-    const avatar = verificaIguais(user.username, obj.username)
+    const avatar = verificaIguais(users, obj.username)
 
     const tweet = {
         username: obj.username,
@@ -41,6 +43,7 @@ app.post('/tweets', (req, res) => {
 
 app.get('/tweets', (req, res) => {
 
+
     res.send(tweets);
 });
 
@@ -49,10 +52,6 @@ app.listen(5000, () => {
 });
 
 function verificaIguais(name, nametweet) {
-    if (nametweet === name) {
-        return user.avatar
-    } else {
-        return null
-    }
-
+    return  name.find((user)=> user.username === nametweet ).avatar
+     
 }
